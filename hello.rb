@@ -170,4 +170,87 @@
 #   puts "#{i}: hello"
 # end
 
-10.times { |i| puts "#{i}: hello" }
+# 10.times { |i| puts "#{i}: hello" }
+
+# for
+# for i in 15..20 do
+#   p i
+# end
+
+# for color in ["red", "blue"] do
+#   p color
+# end
+#
+# for name, score in {taguchi:200, fkoji:400} do
+#   puts "#{name}: #{score}"
+# end
+
+# (15..20).each do |i|
+#   p i
+# end
+#
+# ["red", "blue"].each do |color|
+#   puts color
+# end
+#
+# {taguchi:200, fkoji:400}.each do |name, score|
+#   puts "#{name}: #{score}"
+# end
+
+# loop
+# i = 0
+# loop do
+#   p i
+#   i += 1
+# end
+
+# break
+# next
+# 10.times do |i|
+#   if i == 7 then
+#     #break
+#     next
+#   end
+#   p i
+# end
+
+# メソッド
+# def sayHi(name = "tom") #引数
+#   score = 80
+  # puts "Hi! #{name}"
+#   return "Hi! #{name}"
+# end
+# sayHi("taguchi")
+# sayHi
+# p sayHi
+# p score
+
+# クラス
+class User
+
+  attr_accessor :name
+  # attr_reader :name
+  # setter:name=(value)
+  # getter:name
+
+  def initialize(name)
+    @name = name
+  end
+
+  def sayHi
+    # self
+    # self.name -> @name
+    puts "hi! i am #{@name}"
+    puts "hi! i am #{self.name}"
+    puts "hi! i am #{name}"
+  end
+
+end
+tom = User.new("tom")
+tom.name = "tom.Jr"
+p tom.name
+tom.sayHi # レシーバー
+bob = User.new("bob")
+bob.sayHi
+
+# アクセサ
